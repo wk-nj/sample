@@ -16869,3 +16869,11 @@ footer .panel {
   margin-top: 50px;
 }
 
+footer #logout {
+  cursor: default;
+}
+
+footer #logout:hover {
+  background-color: transparent;
+}
+
