@@ -16782,6 +16782,8 @@ footer {
   /* Users index */
   /* Users index */
   /* statuses */
+  /* sidebar */
+  /* forms */
 }
 
 footer a {
@@ -16961,5 +16963,59 @@ footer aside textarea {
 
 footer .status_form {
   margin-top: 20px;
+}
+
+footer .stats {
+  overflow: auto;
+  margin-top: 0;
+  padding: 0;
+}
+
+footer .stats a {
+  float: left;
+  padding: 0 10px;
+  text-align: center;
+  width: 33%;
+  border-left: 1px solid #eeeeee;
+  color: gray;
+}
+
+footer .stats a:first-child {
+  padding-left: 0;
+  border: 0;
+}
+
+footer .stats a:hover {
+  text-decoration: none;
+  color: #337ab7;
+}
+
+footer .stats strong {
+  display: block;
+  font-size: 1.2em;
+  color: black;
+}
+
+footer .user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+}
+
+footer .user_avatars .gravatar {
+  margin: 1px 1px;
+}
+
+footer .user_avatars a {
+  padding: 0;
+}
+
+footer .users.follow {
+  padding: 0;
+}
+
+footer #follow_form button {
+  margin: 0 auto;
+  display: block;
+  margin-top: 25px;
 }
 

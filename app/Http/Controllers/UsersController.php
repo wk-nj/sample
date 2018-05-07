@@ -17,18 +17,20 @@ class UsersController extends Controller
 			'only'=>['create']
 		]);
 	}
-
+	//用户列表
 	public function index()
 	{
 		$users = User::paginate(10);
 		return view('users.index', compact('users'));
 	}
 
+	//用户注册页面跳转
     public function create()
     {
     	return view('users.create');
     }
 
+    //展示用户信息与发布的微博
     public function show(User $user){
     	$statuses = $user->statuses()->orderBy('created_at','desc')->paginate(30);
     	return view('users.show', compact('user','statuses'));
@@ -79,13 +81,14 @@ class UsersController extends Controller
         return redirect()->route('users.show', [$user]);
     }
 
-
+    //用户编辑页面跳转
     public function edit(User $user)
     {
     	$this->authorize('update', $user);
     	return view('users.edit', compact('user'));
     }
 
+    //更新用户信息
     public function update(User $user, Request $request)
     {
     	$this->validate($request, [
@@ -110,11 +113,27 @@ class UsersController extends Controller
     	return redirect()->route('users.show', $user);
     }
 
+    //删除用户
     public function destroy(User $user)
     {
     	$this->authorize('destroy',$user);
     	$user->delete();
     	session()->flash('success','删除成功！');
     	return back();
+    }
+
+    //用户关注列表
+    public function followings(User $user)
+    {
+    	$users = $user->followings()->paginate(30);
+    	$title = '关注列表';
+    	return view('users.show_follow', compact('users','title'));
+    }
+
+    public function followers(User $user)
+    {
+        $users = $user->followers()->paginate(30);
+        $title = '粉丝列表';
+        return view('users.show_follow', compact('users', 'title'));
     }
 }
