@@ -67,7 +67,6 @@ p {
     color: #fff;
   }
 }
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 /* footer */
 
@@ -108,7 +107,7 @@ footer {
     font-size: 13px;
     font-weight: bold;
   }
-
+}
  /* sidebar */
 
 aside {
@@ -306,6 +305,4 @@ aside {
   margin: 0 auto;
   display: block;
   margin-top: 25px;
-}
-
 }
