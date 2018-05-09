@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>@yield('title', 'Sample') --my firstProject</title>
+  <title>@yield('title', 'Mood') --my firstProject</title>
  <link rel="stylesheet" href="/css/app.css">
   </head>
   <body>
@@ -13,7 +13,7 @@
 	      @yield('content')
 	      @include('layouts._footer')
 	  	</div>
-    </div>    
+    </div>
      <script src="/js/app.js"></script>
   </body>
 </html>

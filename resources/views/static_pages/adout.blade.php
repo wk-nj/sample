@@ -1,5 +1,5 @@
 @extends('layouts.default')
 @section('title', '关于')
 @section('content')
-<h1>关于 </h1>
+<h1>个人学习用 --wk</h1>
 @stop
